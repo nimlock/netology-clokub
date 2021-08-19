@@ -12,6 +12,6 @@ spec:
       protocol: TCP
     env:
     - name: VAULT_DEV_ROOT_TOKEN_ID
-      value: "aiphohTaa0eeHei"
+      value: "u9wtYBA3472U"
     - name: VAULT_DEV_LISTEN_ADDRESS
       value: 0.0.0.0:8200

@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: 14.2-netology-fedora
+spec:
+  containers:
+  - name: fedora
+    image: fedora
+    command: ['sleep', 'infinity']
+    env:
+    - name: TOKEN
+      valueFrom:
+        secretKeyRef:
+          name: 14.2-netology-mysecret
+          key: token
