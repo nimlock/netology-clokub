@@ -1,0 +1,46 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: 14.5-netology-networkpolicy1
+spec:
+  podSelector:
+    matchLabels:
+      app: first
+  policyTypes:
+  - Egress
+  - Ingress
+  egress:
+  - to:
+    - podSelector:
+        matchLabels:
+          app: second
+    - ipBlock:
+        cidr: 0.0.0.0/0
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app: second
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: 14.5-netology-networkpolicy2
+spec:
+  podSelector:
+    matchLabels:
+      app: second
+  policyTypes:
+  - Egress
+  - Ingress
+  egress:
+  - to:
+    - podSelector:
+        matchLabels:
+          app: first
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app: third

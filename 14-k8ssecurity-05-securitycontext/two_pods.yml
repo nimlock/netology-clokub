@@ -1,0 +1,24 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: 14.5-netology-fedora-pod1
+  labels:
+    app: first
+spec:
+  containers:
+  - name: fedora
+    image: fedora
+    command: ['sleep', 'infinity']
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: 14.5-netology-fedora-pod2
+  labels:
+    app: second
+spec:
+  containers:
+  - name: fedora
+    image: fedora
+    command: ['sleep', 'infinity']
