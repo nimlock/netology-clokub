@@ -1,0 +1,5 @@
+# Exclude .terraform
+*/.terraform
+*/.terraform.lock.hcl
+
+easy-rsa/
