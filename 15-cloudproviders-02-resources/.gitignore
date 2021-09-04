@@ -1,0 +1,9 @@
+# Exclude .terraform
+*/.terraform
+*/.terraform.lock.hcl
+
+easy-rsa/
+
+# Exclude all test-files and test-folders
+**/*_test/*
+test_*.*
